@@ -1,0 +1,25 @@
+{
+    "QueueConfigurations": [
+        {
+            "Id": "Snowpipe Auto-ingest",
+            "QueueArn": "[notification_channel]",
+            "Events": [
+                "s3:ObjectCreated:*"
+            ],
+            "Filter": {
+                "Key": {
+                    "FilterRules": [
+                        {
+                            "Name": "Prefix",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "Suffix",
+                            "Value": ""
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

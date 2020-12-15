@@ -1,0 +1,25 @@
+{
+    "QueueConfigurations": [
+        {
+            "Id": "Snowpipe Auto-ingest",
+            "QueueArn": "arn:aws:sqs:eu-west-1:471996701986:sf-snowpipe-AIDAW3ZJSDUREIFX47JG6-0JB65TO_W7lppmF-mLbL-Q",
+            "Events": [
+                "s3:ObjectCreated:*"
+            ],
+            "Filter": {
+                "Key": {
+                    "FilterRules": [
+                        {
+                            "Name": "Prefix",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "Suffix",
+                            "Value": ""
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
